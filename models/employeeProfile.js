@@ -22,6 +22,12 @@ const employeeProfileSchema = new Schema({
         type:String,
         required:true
     },
+    role: {
+        type: String,
+        enum: ['admin', 'employee'], // 'admin' or 'employee'
+        default: 'employee', // default role is 'employee'
+        required: true
+    },
     date: { type: Date, default: Date.now },
 });
 
